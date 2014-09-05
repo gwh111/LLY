@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainPageViewController.h
 //  lianlianwin
 //
 //  Created by apple on 5/9/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController<UITabBarDelegate,UITabBarControllerDelegate>
-
+@interface MainPageViewController : UIViewController
 
 @end
-

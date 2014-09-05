@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185862A019B96AFA00427D9E /* CheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858629F19B96AFA00427D9E /* CheckViewController.m */; };
+		185862A319B96B0200427D9E /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185862A219B96B0200427D9E /* PayViewController.m */; };
+		185862A619B96B0C00427D9E /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185862A519B96B0C00427D9E /* MoreViewController.m */; };
+		185862A919B96DE300427D9E /* MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185862A819B96DE300427D9E /* MainPageViewController.m */; };
 		18FC48FD19B963FD00C740FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC48FC19B963FD00C740FE /* main.m */; };
 		18FC490019B963FD00C740FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC48FF19B963FD00C740FE /* AppDelegate.m */; };
 		18FC490319B963FD00C740FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC490219B963FD00C740FE /* ViewController.m */; };
 		18FC490619B963FD00C740FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FC490419B963FD00C740FE /* Main.storyboard */; };
 		18FC490819B963FD00C740FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FC490719B963FD00C740FE /* Images.xcassets */; };
 		18FC491419B963FD00C740FE /* lianlianwinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC491319B963FD00C740FE /* lianlianwinTests.m */; };
+		18FC491F19B9648900C740FE /* DDMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC491E19B9648900C740FE /* DDMenuController.m */; };
+		18FC492219B966AB00C740FE /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC492119B966AB00C740FE /* LeftViewController.m */; };
+		18FC492519B966B600C740FE /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC492419B966B600C740FE /* RightViewController.m */; };
+		18FC492719B9678600C740FE /* nav_menu_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FC492619B9678600C740FE /* nav_menu_icon@2x.png */; };
+		18FC492919B967AF00C740FE /* nav_menu_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FC492819B967AF00C740FE /* nav_menu_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +35,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1858629E19B96AFA00427D9E /* CheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckViewController.h; sourceTree = "<group>"; };
+		1858629F19B96AFA00427D9E /* CheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckViewController.m; sourceTree = "<group>"; };
+		185862A119B96B0200427D9E /* PayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
+		185862A219B96B0200427D9E /* PayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
+		185862A419B96B0C00427D9E /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		185862A519B96B0C00427D9E /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		185862A719B96DE300427D9E /* MainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageViewController.h; sourceTree = "<group>"; };
+		185862A819B96DE300427D9E /* MainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageViewController.m; sourceTree = "<group>"; };
 		18FC48F719B963FD00C740FE /* lianlianwin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lianlianwin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FC48FB19B963FD00C740FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18FC48FC19B963FD00C740FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -38,6 +55,14 @@
 		18FC490D19B963FD00C740FE /* lianlianwinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lianlianwinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FC491219B963FD00C740FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18FC491319B963FD00C740FE /* lianlianwinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lianlianwinTests.m; sourceTree = "<group>"; };
+		18FC491D19B9648900C740FE /* DDMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMenuController.h; sourceTree = "<group>"; };
+		18FC491E19B9648900C740FE /* DDMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMenuController.m; sourceTree = "<group>"; };
+		18FC492019B966AB00C740FE /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		18FC492119B966AB00C740FE /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		18FC492319B966B600C740FE /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
+		18FC492419B966B600C740FE /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
+		18FC492619B9678600C740FE /* nav_menu_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_menu_icon@2x.png"; sourceTree = "<group>"; };
+		18FC492819B967AF00C740FE /* nav_menu_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_menu_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +106,25 @@
 			children = (
 				18FC48FE19B963FD00C740FE /* AppDelegate.h */,
 				18FC48FF19B963FD00C740FE /* AppDelegate.m */,
+				18FC492819B967AF00C740FE /* nav_menu_icon.png */,
+				18FC492619B9678600C740FE /* nav_menu_icon@2x.png */,
 				18FC490119B963FD00C740FE /* ViewController.h */,
 				18FC490219B963FD00C740FE /* ViewController.m */,
+				18FC492019B966AB00C740FE /* LeftViewController.h */,
+				18FC492119B966AB00C740FE /* LeftViewController.m */,
+				18FC492319B966B600C740FE /* RightViewController.h */,
+				18FC492419B966B600C740FE /* RightViewController.m */,
+				185862A719B96DE300427D9E /* MainPageViewController.h */,
+				185862A819B96DE300427D9E /* MainPageViewController.m */,
+				1858629E19B96AFA00427D9E /* CheckViewController.h */,
+				1858629F19B96AFA00427D9E /* CheckViewController.m */,
+				185862A119B96B0200427D9E /* PayViewController.h */,
+				185862A219B96B0200427D9E /* PayViewController.m */,
+				185862A419B96B0C00427D9E /* MoreViewController.h */,
+				185862A519B96B0C00427D9E /* MoreViewController.m */,
 				18FC490419B963FD00C740FE /* Main.storyboard */,
+				18FC491D19B9648900C740FE /* DDMenuController.h */,
+				18FC491E19B9648900C740FE /* DDMenuController.m */,
 				18FC490719B963FD00C740FE /* Images.xcassets */,
 				18FC48FA19B963FD00C740FE /* Supporting Files */,
 			);
@@ -196,6 +237,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18FC492719B9678600C740FE /* nav_menu_icon@2x.png in Resources */,
+				18FC492919B967AF00C740FE /* nav_menu_icon.png in Resources */,
 				18FC490619B963FD00C740FE /* Main.storyboard in Resources */,
 				18FC490819B963FD00C740FE /* Images.xcassets in Resources */,
 			);
@@ -215,9 +258,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185862A919B96DE300427D9E /* MainPageViewController.m in Sources */,
 				18FC490319B963FD00C740FE /* ViewController.m in Sources */,
+				18FC492219B966AB00C740FE /* LeftViewController.m in Sources */,
 				18FC490019B963FD00C740FE /* AppDelegate.m in Sources */,
+				18FC491F19B9648900C740FE /* DDMenuController.m in Sources */,
+				185862A619B96B0C00427D9E /* MoreViewController.m in Sources */,
 				18FC48FD19B963FD00C740FE /* main.m in Sources */,
+				18FC492519B966B600C740FE /* RightViewController.m in Sources */,
+				185862A019B96AFA00427D9E /* CheckViewController.m in Sources */,
+				185862A319B96B0200427D9E /* PayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +383,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = lianlianwin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -344,6 +395,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = lianlianwin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -404,6 +456,7 @@
 				18FC491919B963FD00C740FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18FC491A19B963FD00C740FE /* Build configuration list for PBXNativeTarget "lianlianwinTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +465,7 @@
 				18FC491C19B963FD00C740FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -25,7 +25,7 @@
     // Override point for customization after application launch.
     self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     
-    ViewController *mainController=[ViewController new];
+    ViewController *mainController=[[ViewController alloc]init];
     UINavigationController *navController=[[UINavigationController alloc]initWithRootViewController:mainController];
     
     DDMenuController *rootController = [[DDMenuController alloc] initWithRootViewController:navController];
