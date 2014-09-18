@@ -22,10 +22,13 @@
     }
     return self;
 }
-
+- (void)viewWillAppear:(BOOL)animated{
+    NSLog(@"充值view");
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
 }
 

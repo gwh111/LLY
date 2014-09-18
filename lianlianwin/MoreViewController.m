@@ -22,10 +22,13 @@
     }
     return self;
 }
-
+- (void)viewWillAppear:(BOOL)animated{
+    NSLog(@"更多view");;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor=[UIColor blackColor];

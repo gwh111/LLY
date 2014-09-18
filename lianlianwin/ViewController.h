@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController<UITabBarDelegate,UITabBarControllerDelegate>
+@interface ViewController : UIViewController<UITabBarControllerDelegate,UITabBarDelegate>
 
 
 @end
