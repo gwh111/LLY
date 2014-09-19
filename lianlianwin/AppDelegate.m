@@ -11,6 +11,7 @@
 #import "ViewController.h"
 #import "LeftViewController.h"
 #import "RightViewController.h"
+#import "SignInViewController.h"
 
 @interface AppDelegate ()
 
@@ -25,8 +26,11 @@
     // Override point for customization after application launch.
     self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     
-    ViewController *mainController=[ViewController new];
+//    ViewController *mainController=[ViewController new];
+//    UINavigationController *navController=[[UINavigationController alloc]initWithRootViewController:mainController];
+    SignInViewController *mainController=[SignInViewController new];
     UINavigationController *navController=[[UINavigationController alloc]initWithRootViewController:mainController];
+    
     
     DDMenuController *rootController = [[DDMenuController alloc] initWithRootViewController:navController];
     _menuController = rootController;
