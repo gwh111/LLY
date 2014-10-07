@@ -10,6 +10,8 @@
 #import "DDMenuController.h"
 #import "MyCell.h"
 
+#import "MemberCenterViewController.h"
+
 @interface MainPageViewController ()
 
 @end
@@ -32,10 +34,11 @@ UICollectionView *collectionView;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationController.navigationBarHidden=YES;
+    self.view.backgroundColor=[UIColor whiteColor];
     
     //navigation
     UIButton *topLeftButton=[UIButton buttonWithType:UIButtonTypeCustom];
-    [topLeftButton setBackgroundImage:[UIImage imageNamed:@"tb_zb.png"] forState:UIControlStateNormal];
+    [topLeftButton setBackgroundImage:[UIImage imageNamed:@"dh.png"] forState:UIControlStateNormal];
     topLeftButton.frame=CGRectMake(20, 25, 30, 30);
     [self.view addSubview:topLeftButton];
     
@@ -48,13 +51,23 @@ UICollectionView *collectionView;
     [self.view addSubview:topTextField];
     
     UIButton *topRightButton=[UIButton buttonWithType:UIButtonTypeCustom];
-    [topRightButton setBackgroundImage:[UIImage imageNamed:@"tb_yb.png"] forState:UIControlStateNormal];
+    [topRightButton setBackgroundImage:[UIImage imageNamed:@"gr.png"] forState:UIControlStateNormal];
     topRightButton.frame=CGRectMake(270, 25, 30, 30);
     [self.view addSubview:topRightButton];
+    [topRightButton addTarget:self action:@selector(topRightButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    
+//    UIImageView *lineImageView_nav=[[UIImageView alloc]initWithFrame:CGRectMake(0, 21, 320, 1)];
+//    lineImageView_nav.image=[UIImage imageNamed:@"xk.png"];
+//    [self.view addSubview:lineImageView_nav];
+    
+    UIImageView *lineImageView1_nav=[[UIImageView alloc]initWithFrame:CGRectMake(0, 69, 320, 1)];
+    lineImageView1_nav.image=[UIImage imageNamed:@"xk.png"];
+    [self.view addSubview:lineImageView1_nav];
     
     //content
     UIScrollView *myScrollView=[[UIScrollView alloc]initWithFrame:CGRectMake(0, 70, 320, self.view.bounds.size.height-70)];
-    myScrollView.contentSize=CGSizeMake(320, 1000);
+    myScrollView.contentSize=CGSizeMake(320, 800);
+    myScrollView.backgroundColor=[UIColor clearColor];
     [self.view addSubview:myScrollView];
     
     UIImageView *adImageView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"banner.png"]];
@@ -65,26 +78,26 @@ UICollectionView *collectionView;
     lineImageView1.image=[UIImage imageNamed:@"xk.png"];
     [myScrollView addSubview:lineImageView1];
     
-    NSArray *iconTextLabelArray=[[NSArray alloc]initWithObjects:@"充值缴费",@"流量电话",@"娱乐",@"彩票",@"理财宝",@"购物",@"分享计划",@"更多分类", nil];
+    NSArray *iconTextLabelArray=[[NSArray alloc]initWithObjects:@"充值缴费",@"170业务",@"分享",@"娱乐",@"彩票",@"中港通",@"购物",@"更多分类", nil];
     
     //content//line1
     UIButton *iconButton1=[UIButton buttonWithType:UIButtonTypeCustom];
-    [iconButton1 setBackgroundImage:[UIImage imageNamed:@"ICO_09.png"] forState:UIControlStateNormal];
+    [iconButton1 setBackgroundImage:[UIImage imageNamed:@"al1.png"] forState:UIControlStateNormal];
     iconButton1.frame=CGRectMake(18, 110, 44, 44);
     [myScrollView addSubview:iconButton1];
     
     UIButton *iconButton2=[UIButton buttonWithType:UIButtonTypeCustom];
-    [iconButton2 setBackgroundImage:[UIImage imageNamed:@"ICO_11.png"] forState:UIControlStateNormal];
+    [iconButton2 setBackgroundImage:[UIImage imageNamed:@"al2.png"] forState:UIControlStateNormal];
     iconButton2.frame=CGRectMake(98, 110, 44, 44);
     [myScrollView addSubview:iconButton2];
     
     UIButton *iconButton3=[UIButton buttonWithType:UIButtonTypeCustom];
-    [iconButton3 setBackgroundImage:[UIImage imageNamed:@"ICO_13.png"] forState:UIControlStateNormal];
+    [iconButton3 setBackgroundImage:[UIImage imageNamed:@"al3.png"] forState:UIControlStateNormal];
     iconButton3.frame=CGRectMake(178, 110, 44, 44);
     [myScrollView addSubview:iconButton3];
     
     UIButton *iconButton4=[UIButton buttonWithType:UIButtonTypeCustom];
-    [iconButton4 setBackgroundImage:[UIImage imageNamed:@"ICO_15.png"] forState:UIControlStateNormal];
+    [iconButton4 setBackgroundImage:[UIImage imageNamed:@"al4.png"] forState:UIControlStateNormal];
     iconButton4.frame=CGRectMake(258, 110, 44, 44);
     [myScrollView addSubview:iconButton4];
     
@@ -123,22 +136,22 @@ UICollectionView *collectionView;
     
     //content//line2
     UIButton *iconButton5=[UIButton buttonWithType:UIButtonTypeCustom];
-    [iconButton5 setBackgroundImage:[UIImage imageNamed:@"ICO_21.png"] forState:UIControlStateNormal];
+    [iconButton5 setBackgroundImage:[UIImage imageNamed:@"al5.png"] forState:UIControlStateNormal];
     iconButton5.frame=CGRectMake(18, 180, 44, 44);
     [myScrollView addSubview:iconButton5];
     
     UIButton *iconButton6=[UIButton buttonWithType:UIButtonTypeCustom];
-    [iconButton6 setBackgroundImage:[UIImage imageNamed:@"ICO_22.png"] forState:UIControlStateNormal];
+    [iconButton6 setBackgroundImage:[UIImage imageNamed:@"al6.png"] forState:UIControlStateNormal];
     iconButton6.frame=CGRectMake(98, 180, 44, 44);
     [myScrollView addSubview:iconButton6];
     
     UIButton *iconButton7=[UIButton buttonWithType:UIButtonTypeCustom];
-    [iconButton7 setBackgroundImage:[UIImage imageNamed:@"ICO_23.png"] forState:UIControlStateNormal];
+    [iconButton7 setBackgroundImage:[UIImage imageNamed:@"al7.png"] forState:UIControlStateNormal];
     iconButton7.frame=CGRectMake(178, 180, 44, 44);
     [myScrollView addSubview:iconButton7];
     
     UIButton *iconButton8=[UIButton buttonWithType:UIButtonTypeCustom];
-    [iconButton8 setBackgroundImage:[UIImage imageNamed:@"ICO_24.png"] forState:UIControlStateNormal];
+    [iconButton8 setBackgroundImage:[UIImage imageNamed:@"al8.png"] forState:UIControlStateNormal];
     iconButton8.frame=CGRectMake(258, 180, 44, 44);
     [myScrollView addSubview:iconButton8];
     
@@ -182,11 +195,28 @@ UICollectionView *collectionView;
     lineBackImageView.backgroundColor=[UIColor colorWithRed:245/255.f green:245/255.f blue:245/255.f alpha:1];
     [myScrollView addSubview:lineBackImageView];
     
-    UITableView *mainTableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 260, 320, 500)];
-    mainTableView.delegate=self;
-    mainTableView.dataSource=self;
-    [myScrollView addSubview:mainTableView];
+//    UITableView *mainTableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 260, 320, 500)];
+//    mainTableView.delegate=self;
+//    mainTableView.dataSource=self;
+//    [myScrollView addSubview:mainTableView];
 
+    UILabel *nameLabel=[[UILabel alloc]initWithFrame:CGRectMake(20, 270, 160, 30)];
+    nameLabel.backgroundColor=[UIColor clearColor];
+    nameLabel.text=@"天天订货会（热卖专区）";
+    nameLabel.font=[UIFont systemFontOfSize:14];
+    [myScrollView addSubview:nameLabel];
+    
+    UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
+    flowLayout.itemSize=CGSizeMake(140,200);
+    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    
+    collectionView=[[UICollectionView alloc]initWithFrame:CGRectMake(0, 300, 320, 430)collectionViewLayout:flowLayout];
+    collectionView.delegate=self;
+    collectionView.dataSource=self;
+    collectionView.backgroundColor=[UIColor colorWithRed:245/255.f green:245/255.f blue:245/255.f alpha:1];
+    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+    [myScrollView addSubview:collectionView];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillShow:)
                                                  name:UIKeyboardWillShowNotification
@@ -254,6 +284,66 @@ UICollectionView *collectionView;
     return view;
 }
 
+//delegate
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UICollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    
+    UIImageView *picImageView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 140, 200)];
+    picImageView.image=[UIImage imageNamed:@"bbcp.png"];
+    [cell.contentView addSubview:picImageView];
+    
+//    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 100, 120, 40)];
+//    label.text=@"韩国进口柠檬杯";
+//    label.textColor=[UIColor blackColor];
+//    label.textAlignment=NSTextAlignmentCenter;
+//    label.backgroundColor=[UIColor greenColor];
+//    NSLog(@"new");
+//    [cell.contentView addSubview:label];
+    
+    cell.backgroundColor=[UIColor grayColor];
+    cell.backgroundView.alpha=1;
+    return cell;
+    
+}
+-(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return 4;
+}
+-(NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
+}
+//////定义每个UICollectionViewCell 的大小
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return CGSizeMake(20, 20);
+//}
+//定义每个Section 的 margin
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(0, 15, 5, 15);//分别为上、左、下、右
+}
+//返回头headerView的大小
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
+    CGSize size={0,0};
+    return size;
+}
+//返回头footerView的大小
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
+{
+    CGSize size={0,0};
+    return size;
+}
+//每个section中不同的行之间的行间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 10;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%d",indexPath.item);
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -271,5 +361,10 @@ UICollectionView *collectionView;
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)topRightButtonTapped{
+    MemberCenterViewController *mem=[[MemberCenterViewController alloc]init];
+    [self.navigationController pushViewController:mem animated:YES];
+}
 
 @end

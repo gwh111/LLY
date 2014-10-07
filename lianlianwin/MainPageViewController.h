@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainPageViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
+@interface MainPageViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @end

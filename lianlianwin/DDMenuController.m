@@ -563,7 +563,7 @@
 }
 
 - (void)setRightViewController:(UIViewController *)rightController {
-    _right = rightController;
+//    _right = rightController;
     _menuFlags.canShowRight = (_right!=nil);
     [self resetNavButtons];
 }

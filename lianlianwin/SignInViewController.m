@@ -8,6 +8,8 @@
 
 #import "SignInViewController.h"
 #import "RegisterViewController.h"
+#import "FogetPasswordViewController.h"
+#import "MainPageViewController.h"
 
 @interface SignInViewController ()
 
@@ -106,25 +108,11 @@ UIImageView *iconImageView4;
         iconImageView3.image=[UIImage imageNamed:@"yq_down.png"];
     }
     
-    iconImageView4=[[UIImageView alloc]initWithFrame:CGRectMake(210, 205, 22, 22)];
-    [self.view addSubview:iconImageView4];
-    if (rememberPassword==0) {
-        iconImageView4.image=[UIImage imageNamed:@"yq.png"];
-    }else{
-        iconImageView4.image=[UIImage imageNamed:@"yq_down.png"];
-    }
-    
     UILabel *iconLabel1=[[UILabel alloc]initWithFrame:CGRectMake(45, 194, 100, 44)];
     iconLabel1.font=[UIFont boldSystemFontOfSize:14];
     iconLabel1.text=@"自动登录";
     iconLabel1.textColor=[UIColor colorWithRed:89/255.f green:89/255.f blue:89/255.f alpha:1];
     [self.view addSubview:iconLabel1];
-    
-    UILabel *iconLabel2=[[UILabel alloc]initWithFrame:CGRectMake(240, 194, 100, 44)];
-    iconLabel2.font=[UIFont boldSystemFontOfSize:14];
-    iconLabel2.text=@"记住密码";
-    iconLabel2.textColor=[UIColor colorWithRed:89/255.f green:89/255.f blue:89/255.f alpha:1];
-    [self.view addSubview:iconLabel2];
     
     UIButton *autoButton=[UIButton buttonWithType:UIButtonTypeCustom];
     autoButton.frame=CGRectMake(15, 194, 100, 44);
@@ -132,13 +120,6 @@ UIImageView *iconImageView4;
     [autoButton addTarget:self action:@selector(buttonTaped:) forControlEvents:UIControlEventTouchUpInside];
     autoButton.tag=5;
     [self.view addSubview:autoButton];
-    
-    UIButton *rememberButton=[UIButton buttonWithType:UIButtonTypeCustom];
-    rememberButton.frame=CGRectMake(210, 194, 100, 44);
-    [rememberButton setBackgroundColor:[UIColor clearColor]];
-    [rememberButton addTarget:self action:@selector(buttonTaped:) forControlEvents:UIControlEventTouchUpInside];
-    rememberButton.tag=6;
-    [self.view addSubview:rememberButton];
     
     //立即登录 注册
     UIButton *signInButton=[UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -288,6 +269,8 @@ UIImageView *iconImageView4;
         cancelButton2.hidden=YES;
     }else if (button.tag==3){
         NSLog(@"signin");
+        MainPageViewController *mainPage=[[MainPageViewController alloc]init];
+        [self.navigationController pushViewController:mainPage animated:YES];
     }else if (button.tag==4){
         NSLog(@"register");
         RegisterViewController *registerViewController=[[RegisterViewController alloc]init];
@@ -316,6 +299,8 @@ UIImageView *iconImageView4;
         }
     }else if (button.tag==7){
         NSLog(@"foget");
+        FogetPasswordViewController *foget=[[FogetPasswordViewController alloc]init];
+        [self.navigationController pushViewController: foget animated:YES];
     }
 }
 

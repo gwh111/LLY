@@ -1,18 +1,19 @@
 //
-//  RegisterViewController.m
+//  FogetPasswordViewController.m
 //  LLY
 //
-//  Created by apple on 19/9/14.
+//  Created by apple on 23/9/14.
 //  Copyright (c) 2014年 ___GWH___. All rights reserved.
 //
 
-#import "RegisterViewController.h"
+#import "FogetPasswordViewController.h"
 
-@interface RegisterViewController ()
+@interface FogetPasswordViewController ()
 
 @end
 
-@implementation RegisterViewController
+@implementation FogetPasswordViewController
+
 
 UIView *myView;
 UIButton *getIdButton;
@@ -52,7 +53,7 @@ int getTimer;
     UILabel *titleLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, 20, 320, 50)];
     titleLabel.backgroundColor=[UIColor clearColor];
     titleLabel.textAlignment=NSTextAlignmentCenter;
-    titleLabel.text=@"注册";
+    titleLabel.text=@"忘记登录密码";
     titleLabel.font=[UIFont boldSystemFontOfSize:18];
     titleLabel.textColor=[UIColor colorWithRed:89/255.f green:89/255.f blue:89/255.f alpha:1];
     [self.view addSubview:titleLabel];
@@ -79,7 +80,7 @@ int getTimer;
     UIImageView *textImageView=[[UIImageView alloc]initWithFrame:CGRectMake(15, 90, 290, 50)];
     textImageView.image=[UIImage imageNamed:@"zck3.png"];
     [myView addSubview:textImageView];
-
+    
     UIImageView *iconImageView1=[[UIImageView alloc]initWithFrame:CGRectMake(15, 150, 145, 50)];
     iconImageView1.image=[UIImage imageNamed:@"zck3.png"];
     [myView addSubview:iconImageView1];
@@ -162,13 +163,13 @@ int getTimer;
     [cancelButton1 addTarget:self action:@selector(buttonTaped:) forControlEvents:UIControlEventTouchUpInside];
     cancelButton1.tag=1;
     [myView addSubview:cancelButton1];
-//    
-//    cancelButton2=[UIButton buttonWithType:UIButtonTypeCustom];
-//    cancelButton2.frame=CGRectMake(260, 165, 21, 21);
-//    [cancelButton2 setBackgroundImage:[UIImage imageNamed:@"x.png"] forState:UIControlStateNormal];
-//    [cancelButton2 addTarget:self action:@selector(buttonTaped:) forControlEvents:UIControlEventTouchUpInside];
-//    cancelButton2.tag=2;
-//    [myView addSubview:cancelButton2];
+    //
+    //    cancelButton2=[UIButton buttonWithType:UIButtonTypeCustom];
+    //    cancelButton2.frame=CGRectMake(260, 165, 21, 21);
+    //    [cancelButton2 setBackgroundImage:[UIImage imageNamed:@"x.png"] forState:UIControlStateNormal];
+    //    [cancelButton2 addTarget:self action:@selector(buttonTaped:) forControlEvents:UIControlEventTouchUpInside];
+    //    cancelButton2.tag=2;
+    //    [myView addSubview:cancelButton2];
     
     cancelButton3=[UIButton buttonWithType:UIButtonTypeCustom];
     cancelButton3.frame=CGRectMake(260, 225, 21, 21);
@@ -323,7 +324,7 @@ int getTimer;
         [UIView animateWithDuration:0.5f animations:^{
             myView.frame=CGRectMake(0, 0, 320, self.view.bounds.size.height);
         } completion:^(BOOL finished) {
-       
+            
         }];
     }else if (textField.tag==2){
         [UIView animateWithDuration:0.5f animations:^{
@@ -347,12 +348,12 @@ int getTimer;
     
 }
 
-- (void)viewWillDisappear:(BOOL)animated{
-    [idTimer invalidate];
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField{
-
+- (void)viewWillDisappear:(BOOL)animated{
+    [idTimer invalidate];
 }
 
 - (void)didReceiveMemoryWarning
