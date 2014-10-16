@@ -7,6 +7,7 @@
 //
 
 #import "ChargeViewController.h"
+#import "ChargeTelViewController.h"
 
 @interface ChargeViewController ()
 
@@ -103,6 +104,18 @@
     [iconButton2 setTitleColor:[UIColor colorWithRed:40/255.f green:146/255.f blue:1 alpha:0.8] forState:UIControlStateNormal];
     iconButton2.frame=CGRectMake(230, 160, 80, 50);
     [self.view addSubview:iconButton2];
+    
+    UIButton *tapButton1=[UIButton buttonWithType:UIButtonTypeCustom];
+    tapButton1.frame=CGRectMake(0, 64, 320, 80);
+    tapButton1.backgroundColor=[UIColor clearColor];
+    [self.view addSubview:tapButton1];
+    [tapButton1 addTarget:self action:@selector(tapButton1) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *tapButton2=[UIButton buttonWithType:UIButtonTypeCustom];
+    tapButton2.frame=CGRectMake(0, 144, 320, 80);
+    tapButton2.backgroundColor=[UIColor clearColor];
+    [self.view addSubview:tapButton2];
+    [tapButton2 addTarget:self action:@selector(tapButton2) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning
@@ -125,5 +138,11 @@
 - (void)backButtonTapped{
     [self.navigationController popViewControllerAnimated:YES];
 }
-
+- (void)tapButton1{
+    ChargeTelViewController *tel=[[ChargeTelViewController alloc]init];
+    [self.navigationController pushViewController:tel animated:YES];
+}
+- (void)tapButton2{
+    
+}
 @end
