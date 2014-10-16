@@ -53,6 +53,14 @@ NSArray *buttonArray;
     backImageView.image=[UIImage imageNamed:@"xq.png"];
     [self.view addSubview:backImageView];
     
+    UILabel *titleLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, 20, 320, 50)];
+    titleLabel.backgroundColor=[UIColor clearColor];
+    titleLabel.textAlignment=NSTextAlignmentCenter;
+    titleLabel.text=@"个人中心";
+    titleLabel.font=[UIFont boldSystemFontOfSize:18];
+    titleLabel.textColor=[UIColor colorWithRed:89/255.f green:89/255.f blue:89/255.f alpha:1];
+    [self.view addSubview:titleLabel];
+    
 //    UIImageView *lineImageView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 21, 320, 1)];
 //    lineImageView.image=[UIImage imageNamed:@"xk.png"];
 //    [self.view addSubview:lineImageView];

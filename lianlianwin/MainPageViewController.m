@@ -12,6 +12,8 @@
 
 #import "MemberCenterViewController.h"
 
+#import "ChargeViewController.h"
+
 @interface MainPageViewController ()
 
 @end
@@ -225,6 +227,10 @@ UICollectionView *collectionView;
                                              selector:@selector(keyboardWillBeHidden:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
+    
+    iconButton1.tag=1;
+    [iconButton1 addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [iconButton2 addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 //keyBoard
@@ -361,6 +367,13 @@ UICollectionView *collectionView;
     // Pass the selected object to the new view controller.
 }
 */
+- (void)buttonTapped:(id)sender{
+    UIButton *button=(UIButton*)sender;
+    if (button.tag==1) {
+        ChargeViewController *charge=[[ChargeViewController alloc]init];
+        [self.navigationController pushViewController:charge animated:YES];
+    }
+}
 
 - (void)topRightButtonTapped{
     MemberCenterViewController *mem=[[MemberCenterViewController alloc]init];
